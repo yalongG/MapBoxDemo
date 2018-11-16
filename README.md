@@ -99,7 +99,8 @@ mMap.removePolygon(polygon);
  for (int i = 0, j = polygonLatLngList.size(); i < j; i++) {
      mMap.addMarker(new MarkerOptions().position(polygonLatLngList.get(i)));
  }
-LatLngBounds latLngBounds = new LatLngBounds.Builder().includes(polygonLatLngList).build(); mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 20));
+LatLngBounds latLngBounds = new LatLngBounds.Builder().includes(polygonLatLngList).build();
+mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 20));
 ```
 
 ### source and layer
@@ -136,7 +137,8 @@ mMap.addLayer(layer);
 
 // 自定义line layer
 List<Position> lineCoordinates = new ArrayList<>();
-for (int i = 0, j = getPositionList().size(); i < j; i++) {           lineCoordinates.add(Position.fromCoordinates(
+for (int i = 0, j = getPositionList().size(); i < j; i++) {        
+    lineCoordinates.add(Position.fromCoordinates(
     getPositionList().get(i).getLongitude(), getPositionList().get(i).getLatitude()));
  }
 LineString lineString = LineString.fromCoordinates(lineCoordinates);
