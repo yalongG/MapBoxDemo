@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="-37.821648"
+        mapbox:mapbox_cameraTargetLng="144.978594"
+        mapbox:mapbox_cameraZoom="10"
+        mapbox:mapbox_styleUrl="mapbox://styles/mapbox/satellite-v9" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_add_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加marker" />
+
+        <Button
+            android:id="@+id/btn_remove_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="移除marker" />
+
+        <Button
+            android:id="@+id/btn_custom_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义marker" />
+
+        <Button
+            android:id="@+id/btn_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="画线" />
+
+        <Button
+            android:id="@+id/btn_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="画面" />
+    </LinearLayout>
+</RelativeLayout>

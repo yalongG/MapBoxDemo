@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MapBoxDemo</string>
+    <!--需要自己在mapbox官网申请一个key -->
+    <string name="mapbox_access_token">申请的key</string>
 </resources>
